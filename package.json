@@ -1,0 +1,28 @@
+{
+  "name": "ai-health-fitness-app",
+  "version": "1.0.0",
+  "description": "AI-powered health and fitness application",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev-auto": "node start-all.js",
+    "server": "cd server && node index.js",
+    "server-auto": "cd server && npm run dev-auto",
+    "client": "cd client && npm run dev",
+    "client-auto": "cd client && npm run dev-auto",
+    "build": "cd client && npm run build",
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && node scripts/seedFoods.js"
+  },
+  "keywords": [
+    "health",
+    "fitness",
+    "ai",
+    "mern"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
